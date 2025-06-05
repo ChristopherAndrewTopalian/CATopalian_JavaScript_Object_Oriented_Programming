@@ -1,5 +1,5 @@
 # CATopalian JavaScript Object Oriented Programming
-A Tutorial series that teaches step by step all of the important concepts of Object Oriented Progrmaming using JavaScript.
+A Tutorial series that teaches step by step all of the important concepts of Object Oriented Programming using JavaScript.
 
 # Objects
 

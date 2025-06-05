@@ -1,4 +1,4 @@
-// array_of_objects_console_table.js
+// aoo_console_table.js
 
 // create an array to store objects
 let people = [

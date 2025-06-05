@@ -1,4 +1,4 @@
-// array_of_objects_console_log_specified_object_by_index_JSON_stringify.js
+// aoo_console_log_specified_object_by_index_JSON_stringify.js
 
 // create an array to store objects
 let people = [

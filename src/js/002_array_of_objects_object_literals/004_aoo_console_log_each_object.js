@@ -1,4 +1,4 @@
-// array_of_objects_console_log_each_object.js
+// aoo_console_log_each_object.js
 
 // create an array to store objects
 let people = [

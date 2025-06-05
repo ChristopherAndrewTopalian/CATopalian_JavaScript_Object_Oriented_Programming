@@ -11,9 +11,29 @@ A Tutorial series that teaches step by step all of the important concepts of Obj
 
 > ### [modifying_a_property_console_log](src/js/001_objects/004_modifying_a_property_console_log.js)  
 
-> ### [add_a_new_property_console_log.js](src/js/001_objects/005_add_a_new_property_console_log.js)  
+> ### [add_a_new_property_console_log](src/js/001_objects/005_add_a_new_property_console_log.js)  
 
----
+> ## 
+
+# Array of Objects - Object Literals  
+
+> ### [array_of_objects_console_log](src/js/002_array_of_objects_object_literals/001_aoo_console_log.js)  
+
+> ### [array_of_objects_console_log_JSON_stringify.js](src/js/002_array_of_objects_object_literals/002_aoo_console_log_JSON_stringify.js)  
+
+> ### [array_of_objects_console_table](src/js/002_array_of_objects_object_literals/003_aoo_console_table.js)  
+
+> ### [array_of_objects_console_log_each_object](src/js/002_array_of_objects_object_literals/004_aoo_console_log_each_object.js)  
+
+> ### [array_of_objects_console_log_specified_object_by_index_JSON_stringify](src/js/002_array_of_objects_object_literals/005_aoo_console_log_specified_object_by_index_JSON_stringify.js)  
+
+> ### [array_of_objects_console_log_specified_object_by_index](src/js/002_array_of_objects_object_literals/006_aoo_console_log_specified_object_by_index.js)  
+
+> ### [array_of_objects_console_log_specified_object_by_name_JSON_stringify](src/js/002_array_of_objects_object_literals/007_aoo_console_log_specified_object_by_name_JSON_stringify.js)  
+
+> ### [array_of_objects_console_log_specified_object_by_name](src/js/002_array_of_objects_object_literals/008_aoo_console_log_specified_object_by_name.js)  
+
+> ### [array_of_objects_console_log_specified_object_by_name_variable](src/js/002_array_of_objects_object_literals/009_aoo_console_log_specified_object_by_name_variable.js)  
 
 ---
 

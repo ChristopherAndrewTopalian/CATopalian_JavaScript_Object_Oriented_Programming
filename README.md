@@ -35,6 +35,16 @@ A Tutorial series that teaches step by step all of the important concepts of Obj
 
 > ### [array_of_objects_console_log_specified_object_by_name_variable](src/js/002_array_of_objects_object_literals/009_aoo_console_log_specified_object_by_name_variable.js)  
 
+> ## 
+
+#  Array of Objects Push Object to Array
+
+> ### [array_of_objects_push_object_to_array](src/js/003_array_of_objects_push_object_to_array/001_aoo_push_object_to_array_console_log.js)  
+
+> ### [aoo_push_object_to_array_console_log_each_property](src/js/003_array_of_objects_push_object_to_array/002_aoo_push_object_to_array_console_log_each_property.js)  
+
+> ### [aoo_object_push_to_array_prompt_inputs_while_loop](src/js/003_array_of_objects_push_object_to_array/003_aoo_object_push_to_array_prompt_inputs_while_loop.js)  
+
 ---
 
 ### How to Download this Tutorial

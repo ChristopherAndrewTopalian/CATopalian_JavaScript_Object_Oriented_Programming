@@ -1,0 +1,215 @@
+<!-- Dedicated to God the Father -->
+<!-- All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025 -->
+<!-- https://github.com/ChristopherTopalian -->
+<!-- https://github.com/ChristopherAndrewTopalian -->
+<!-- gui_inputs_object_push_to_array.html.html -->
+
+<html>
+<head>
+<title> GUI Inputs Object push to Array </title>
+
+<style>
+
+body
+{
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+}
+
+input
+{
+    margin: 2px;
+}
+
+input[type = "number"]
+{
+    width: 100px;
+}
+
+button
+{
+    margin: 2px;
+}
+
+</style>
+
+<script>
+
+// shortcuts.js
+
+function ge(whichId)
+{
+    let result = document.getElementById(whichId);
+    return result;
+}
+
+function ce(whichType)
+{
+    let result = document.createElement(whichType);
+    return result;
+}
+
+function ba(whichElement)
+{
+    let result = document.body.append(whichElement);
+    return result;
+}
+
+function cl(whichMessage)
+{
+    let result = console.log(whichMessage);
+    return result;
+}
+
+//--//
+
+// worldVariables.js
+
+let people = [];
+
+//--//
+
+// makeInterface.js
+
+function makeInterface()
+{
+    // container to hold name and score
+    let nameScoreContainer = ce('div');
+    ba(nameScoreContainer);
+
+    //-//
+
+    // label for name
+    let nameLabel = ce('label');
+    nameLabel.textContent = 'Name: ';
+    nameLabel.setAttribute('for', 'nameInput');
+    nameScoreContainer.append(nameLabel);
+
+    //-//
+
+    // name input
+    let nameInput = ce('input');
+    nameInput.placeholder = 'Name';
+    nameInput.id = 'nameInput';
+    nameScoreContainer.append(nameInput);
+
+    //-//
+
+    // label for score
+    let scoreLabel = ce('label');
+    scoreLabel.textContent = 'Score: ';
+    scoreLabel.setAttribute('for', 'scoreInput');
+    nameScoreContainer.append(scoreLabel);
+
+    //-//
+
+    // score input
+    let scoreInput = ce('input');
+    scoreInput.type = 'number';
+    scoreInput.placeholder = 'Score';
+    scoreInput.id = 'scoreInput';
+    nameScoreContainer.append(scoreInput);
+
+    //-//
+
+    // add button
+    let addButton = ce('button');
+    addButton.textContent = 'Add Entry';
+    addButton.onclick = function()
+    {
+        let name = ge('nameInput').value;
+
+        //-//
+
+        let score = parseInt(ge('scoreInput').value);
+
+        //-//
+
+        // make an object variable with properties of name and score, that are assigned values from the name and score inputs
+        let entry = 
+        {
+            name: name,
+            score: score
+        };
+
+        //-//
+
+        // add the entry object to the people array
+        people.push(entry);
+
+        //-//
+
+        updateOutput();
+
+        //-//
+
+        cl(entry);
+        cl(people);
+    };
+    nameScoreContainer.append(addButton);
+
+    //-//
+
+    let outputArray = ce('div');
+    outputArray.id = 'outputArray';
+    outputArray.style.width = '400px';
+    outputArray.style.height = '150px';
+    outputArray.style.margin = '2px';
+    outputArray.style.border = 'solid 1px rgb(255, 255, 255)';
+    outputArray.style.padding = '10px';
+    outputArray.style.overflowY = 'scroll';
+    ba(outputArray);
+}
+
+//--//
+
+// updateOutput.js
+
+function updateOutput()
+{
+    let outputArray = ge('outputArray');
+
+    //-//
+
+    // clear previous content
+    outputArray.textContent = '';
+
+    //-//
+
+    for (let x = 0; x < people.length; x++)
+    {
+        let nameDiv = ce('div');
+        nameDiv.textContent = people[x].name;
+        outputArray.append(nameDiv);
+
+        //-//
+
+        let scoreDiv = ce('div');
+        scoreDiv.textContent = people[x].score;
+        outputArray.append(scoreDiv);
+
+        //-//
+
+        outputArray.append(ce('hr'));
+    }
+}
+
+//--//
+
+// whenLoaded.js
+
+function whenLoaded()
+{
+    makeInterface();
+}
+
+</script>
+
+</head>
+
+<body onload = 'whenLoaded()'>
+
+</body>
+
+</html>
+

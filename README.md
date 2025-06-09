@@ -45,6 +45,12 @@ A Tutorial series that teaches step by step all of the important concepts of Obj
 
 > ### [aoo_object_push_to_array_prompt_inputs_while_loop](src/js/003_array_of_objects_push_object_to_array/003_aoo_object_push_to_array_prompt_inputs_while_loop.js)  
 
+> ## 
+
+# GUI Array of Objects push Object to Array
+
+> ### [gui_object_push_to_array_inputs](src/js/004_gui_array_of_objects_push_object_to_array/004_gui_inputs_object_push_to_array.html)  
+
 ---
 
 ### How to Download this Tutorial

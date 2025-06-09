@@ -49,7 +49,7 @@ A Tutorial series that teaches step by step all of the important concepts of Obj
 
 # GUI Array of Objects push Object to Array
 
-> ### [gui_inputs_object_push_to_array](src/js/004_gui_array_of_objects_push_object_to_array/004_gui_inputs_object_push_to_array.html)  
+> ### [gui_inputs_object_push_to_array](src/js/004_gui_array_of_objects_push_object_to_array/001_gui_inputs_object_push_to_array.html)  
 
 ---
 

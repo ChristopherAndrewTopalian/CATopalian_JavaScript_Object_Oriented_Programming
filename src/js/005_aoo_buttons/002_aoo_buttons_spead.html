@@ -2,11 +2,11 @@
 <!-- All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025 -->
 <!-- https://github.com/ChristopherTopalian -->
 <!-- https://github.com/ChristopherAndrewTopalian -->
-<!-- aoo_buttons.html -->
+<!-- aoo_buttons_spread.html -->
 
 <html>
 <head>
-<title> aoo buttons </title>
+<title> AOO Buttons Spread </title>
 
 <style>
 
@@ -14,11 +14,13 @@ body
 {
     background-color: rgb(30, 30, 30);
     color: rgb(255, 255, 255);
+    font-family: sans-serif;
 }
 
 button
 {
-    margin: 2px;
+    margin: 4px;
+    padding: 6px 12px;
     background-color: rgb(0, 0, 0);
     border: solid 1px rgb(255, 255, 255);
     border-radius: 8px;
@@ -34,23 +36,29 @@ button:hover
 button:active
 {
     color: rgb(0, 255, 255);
-}   
+}
+
+#output
+{
+    margin-top: 10px;
+    font-size: 18px;
+}
 
 </style>
 
 <script>
 
-// shortcuts
-
-function ge(whichId)
-{
-    let result = document.getElementById(whichId);
-    return result;
-}
+// utility functions
 
 function ce(whichType)
 {
     let result = document.createElement(whichType);
+    return result;
+}
+
+function ge(whichId)
+{
+    let result = document.getElementById(whichId);
     return result;
 }
 
@@ -66,7 +74,7 @@ function cl(whichMessage)
     return result;
 }
 
-// functions to use
+// actual actions
 
 function greet()
 {
@@ -83,9 +91,9 @@ function sum(a, b)
     return 'Sum is ' + (a + b);
 }
 
-// array of objects with safe references
+// buttons to generate
 
-let buttonList = 
+let buttonList =
 [
     {
         label: 'Say Hi',
@@ -104,25 +112,24 @@ let buttonList =
     }
 ];
 
-//----//
+// build the interface
 
 function makeInterface()
 {
     for (let i = 0; i < buttonList.length; i++)
     {
+        let info = buttonList[i];
+
         let theButton = ce('button');
-        theButton.textContent = buttonList[i].label;
+        theButton.textContent = info.label;
         theButton.onclick = function()
         {
-            let result = buttonList[i].method.apply(null, buttonList[i].args);
+            let result = info.method(...info.args);
 
-            // show result
             ge('output').textContent = result;
         };
         ba(theButton);
     }
-
-    //----//
 
     let output = ce('div');
     output.id = 'output';
@@ -143,4 +150,19 @@ function whenLoaded()
 </body>
 
 </html>
+
+<!--
+The spread operator ... spreads an array into individual arguments.
+
+So:
+
+If info.args is an empty array ([]),
+it becomes ()
+
+If info.args is ['Jane'],
+it becomes ('Jane')
+
+If it's [3, 4],
+it becomes (3, 4)
+-->
 

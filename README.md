@@ -53,6 +53,12 @@ A Tutorial series that teaches step by step all of the important concepts of Obj
 
 ---
 
+> ### 
+
+# GUI Array of Objects Buttons
+
+[gui_inputs_object_push_to_array](src/js/005_aoo_buttons/001_aoo_buttons.html)  
+
 ### How to Download this Tutorial
 1. Click the green Code Button on this github page
 2. Choose Download ZIP

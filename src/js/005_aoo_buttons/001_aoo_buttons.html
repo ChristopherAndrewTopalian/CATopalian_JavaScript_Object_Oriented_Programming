@@ -1,0 +1,146 @@
+<!-- Dedicated to God the Father -->
+<!-- All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025 -->
+<!-- https://github.com/ChristopherTopalian -->
+<!-- https://github.com/ChristopherAndrewTopalian -->
+<!-- aoo_buttons.html -->
+
+<html>
+<head>
+<title> aoo buttons </title>
+
+<style>
+
+body
+{
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+}
+
+button
+{
+    margin: 2px;
+    background-color: rgb(0, 0, 0);
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+button:hover
+{
+    border-color: rgb(0, 255, 255);
+}
+
+button:active
+{
+    color: rgb(0, 255, 255);
+}   
+
+</style>
+
+<script>
+
+// shortcuts
+
+function ge(whichId)
+{
+    let result = document.getElementById(whichId);
+    return result;
+}
+
+function ce(whichType)
+{
+    let result = document.createElement(whichType);
+    return result;
+}
+
+function ba(whichElement)
+{
+    let result = document.body.append(whichElement);
+    return result;
+}
+
+function cl(whichMessage)
+{
+    let result = console.log(whichMessage);
+    return result;
+}
+
+// functions to use
+
+function greet()
+{
+    return 'Hi';
+}
+
+function shout(name)
+{
+    return 'HI, ' + name + '!';
+}
+
+function sum(a, b)
+{
+    return 'Sum is ' + (a + b);
+}
+
+// array of objects with safe references
+
+let buttonList = 
+[
+    {
+        label: 'Say Hi',
+        method: greet,
+        args: []
+    },
+    {
+        label: 'Shout to Jane',
+        method: shout,
+        args: ['Jane']
+    },
+    {
+        label: 'Add 3 and 4',
+        method: sum,
+        args: [3, 4]
+    }
+];
+
+//----//
+
+function makeInterface()
+{
+    for (let i = 0; i < buttonList.length; i++)
+    {
+        let theButton = ce('button');
+        theButton.textContent = buttonList[i].label;
+        theButton.onclick = function()
+        {
+            let result = buttonList[i].method.apply(null, buttonList[i].args);
+
+            // show result
+            ge('output').textContent = result;
+        };
+        ba(theButton);
+    }
+
+    //----//
+
+    let output = ce('div');
+    output.id = 'output';
+    ba(output);
+}
+
+function whenLoaded()
+{
+    makeInterface();
+}
+
+</script>
+
+</head>
+
+<body onload = 'whenLoaded()'>
+
+</body>
+
+</html>
+
